@@ -69,6 +69,14 @@ blockquote{ border-left: 4px solid var(--border); padding-left: .75rem; color: v
 .paper-title{ font-weight: 600; }
 .paper-meta{ color: var(--muted); font-size: .95rem; }
 
+.credits small {
+  font-family: "OCR A Std", "OCR A", monospace;
+  display: block;
+  text-align: center;   /* optional, looks nice at the bottom */
+  margin-top: 2em;      /* spacing above it */
+  color: #555;          /* subtle gray tone */
+}
+
 /* Responsive */
 @media (max-width: 860px){
   #site-nav{ grid-template-columns: 1fr auto; }
