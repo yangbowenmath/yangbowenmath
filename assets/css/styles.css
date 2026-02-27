@@ -177,3 +177,23 @@ main ol > li{
   /* nothing functional here; just a reminder:
      replace </br> with <br> in HTML for valid markup */
 }
+/* --- Fix numbering alignment on research publication lists --- */
+.pub-list{
+  padding-left: 1.6rem;          /* consistent indent */
+  margin-top: 0.5rem;
+}
+
+.pub-list > li{
+  margin: 0 0 1.05rem 0;         /* space between papers */
+  padding-left: 0.25rem;         /* keeps text off the marker */
+}
+
+/* Ensure markers align nicely and don’t look “off” when wrapping */
+.pub-list > li::marker{
+  font-variant-numeric: tabular-nums;
+}
+
+/* If your titles are displayed as blocks anywhere, keep them inline */
+.pub-list > li > strong{
+  display: inline;
+}
