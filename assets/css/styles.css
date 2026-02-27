@@ -95,3 +95,85 @@ blockquote{ border-left: 4px solid var(--border); padding-left: .75rem; color: v
 
 .visually-hidden{ position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
 
+/* =========================
+   Research page readability
+   Append-only overrides
+   ========================= */
+
+/* Slightly calmer overall text rhythm */
+html, body{
+  line-height: 1.62;
+}
+
+/* Make topic headings (e.g., "Algebraic Theory of Stabilizer Codes") quieter */
+main h2{
+  font-size: 1.08rem;     /* was default; smaller = less shouty */
+  font-weight: 600;       /* less bold than heavy headings */
+  letter-spacing: 0.01em;
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+}
+
+/* Increase spacing inside lists so papers breathe */
+main ol, main ul{
+  padding-left: 1.25rem;
+}
+
+/* More vertical space between items */
+main ol > li, main ul > li{
+  margin: 0 0 1.05rem 0;
+}
+
+/* If list items contain multiple lines, give internal breathing room */
+main ol > li br, main ul > li br{
+  line-height: 1.9;
+}
+
+/* Make the paper title stand out, but not like a heading */
+main ol > li > strong,
+main ul > li > strong{
+  display: inline-block;
+  font-weight: 650;
+  font-size: 1.02rem;
+  margin-bottom: 0.15rem;
+}
+
+/* Make venue/journal more noticeable than surrounding text */
+main em{
+  font-style: normal;            /* remove italics (easier to scan) */
+  font-variant: small-caps;      /* journal pops in a math-y way */
+  letter-spacing: 0.03em;
+  font-weight: 650;
+}
+
+/* Subdue author lines ("with ...") so journals/links get attention */
+main ol > li{
+  color: var(--fg);
+}
+main ol > li{
+  max-width: 78ch;               /* improve readability on wide screens */
+}
+
+/* Make bracketed link bundles easier to spot without being loud */
+main ol > li a{
+  border-bottom: 1px solid color-mix(in oklab, var(--link) 40%, transparent);
+  text-decoration: none;
+}
+main ol > li a:hover{
+  border-bottom-color: var(--link-hover);
+  text-decoration: none;
+}
+
+/* Optional: slightly dim the "preprint (year)" text */
+main ol > li{
+  font-size: 1rem;
+}
+main ol > li{
+  /* no global color change; keep your theme */
+}
+
+/* Fix the invalid </br> usage visually if it exists (best is to change HTML to <br>) */
+main ol > li{
+  /* nothing functional here; just a reminder:
+     replace </br> with <br> in HTML for valid markup */
+}
