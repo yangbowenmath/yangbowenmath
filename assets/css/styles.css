@@ -196,4 +196,7 @@ main ol > li{
 /* If your titles are displayed as blocks anywhere, keep them inline */
 .pub-list > li > strong{
   display: inline;
+
+  /* Keep links inline inside paragraphs */
+p a { display: inline; }
 }
