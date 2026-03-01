@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Profile diagram: bulk–boundary / QCA / Ext / cup products</title>
+  <desc>Circle-cropped profile graphic with a commutative diagram and formulas drawn from the uploaded papers: K(Λ,Zd)≅L1(CΛ(A),−1), Q(C)≅Ext^1_R(P/L,R), Qi(C)=Ext^{i+1}_R(P/L,R), and the 3-fermion cup-product action.</desc>
+
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="#151c36"/>
+      <stop offset="55%" stop-color="#0c1022"/>
+      <stop offset="100%" stop-color="#070913"/>
+    </radialGradient>
+
+    <linearGradient id="edge" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2.3" cy="2.3" r="1.1" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+
+    <marker id="arr" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e6e9ff" fill-opacity="0.85"/>
+    </marker>
+
+    <clipPath id="circleClip">
+      <circle cx="512" cy="512" r="492"/>
+    </clipPath>
+
+    <!-- circle path for text -->
+    <path id="ringPath" d="M512,66 a446,446 0 1,1 -0.1,0 z"/>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Background -->
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#bg)"/>
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#dots)"/>
+
+    <!-- Big faint symbols -->
+    <g opacity="0.10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      <text x="82" y="930" font-size="360">∪</text>
+      <text x="760" y="310" font-size="260">δ</text>
+      <text x="640" y="910" font-size="170">Ext</text>
+      <text x="86" y="290" font-size="150">W</text>
+    </g>
+
+    <!-- Ring text (cup-product action) -->
+    <g opacity="0.78" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#eef1ff">
+      <text font-size="20" letter-spacing="1.3">
+        <textPath href="#ringPath" startOffset="50%" text-anchor="middle">
+          S = ½ ∫ (A₂ ∪ A₂ + B₂ ∪ B₂ + A₂ ∪ B₂)    •    δA₂ = δB₂ = 0
+        </textPath>
+      </text>
+    </g>
+
+    <!-- Central commutative square -->
+    <g filter="url(#glow)">
+      <!-- soft panel behind diagram -->
+      <rect x="132" y="250" width="760" height="524" rx="44"
+            fill="#0c1022" fill-opacity="0.55" stroke="url(#edge)" stroke-width="2"/>
+
+      <!-- Nodes -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+        <!-- TL -->
+        <rect x="196" y="322" width="300" height="132" rx="28"
+              fill="#0b0f20" fill-opacity="0.88" stroke="#e6e9ff" stroke-opacity="0.22" stroke-width="2"/>
+        <text x="346" y="372" text-anchor="middle" font-size="22" fill="#eef1ff">K(Λ, ℤ<tspan baseline-shift="sub" font-size="16">d</tspan>)</text>
+        <text x="346" y="406" text-anchor="middle" font-size="16" fill="#cfd6ff" opacity="0.92">Clifford QCA classes</text>
+
+        <!-- TR -->
+        <rect x="528" y="322" width="300" height="132" rx="28"
+              fill="#0b0f20" fill-opacity="0.88" stroke="#e6e9ff" stroke-opacity="0.22" stroke-width="2"/>
+        <text x="678" y="366" text-anchor="middle" font-size="20" fill="#eef1ff">
+          L<tspan baseline-shift="sub" font-size="16">1</tspan>(C<tspan baseline-shift="sub" font-size="16">Λ</tspan>(𝒜), −1)
+        </text>
+        <text x="678" y="402" text-anchor="middle" font-size="16" fill="#cfd6ff" opacity="0.92">Pedersen–Weibel / L-theory</text>
+
+        <!-- BL -->
+        <rect x="196" y="570" width="300" height="150" rx="28"
+              fill="#0b0f20" fill-opacity="0.88" stroke="#e6e9ff" stroke-opacity="0.22" stroke-width="2"/>
+        <text x="346" y="620" text-anchor="middle" font-size="20" fill="#eef1ff">
+          Q(C) ≅ Ext<tspan baseline-shift="super" font-size="14">1</tspan><tspan font-size="18"> </tspan>
+          <tspan font-size="18">_R</tspan>(P/L, R)
+        </text>
+        <text x="346" y="654" text-anchor="middle" font-size="16" fill="#cfd6ff" opacity="0.92">local excitations / charges</text>
+        <text x="346" y="686" text-anchor="middle" font-size="14" fill="#cfd6ff" opacity="0.72">Pauli stabilizer codes</text>
+
+        <!-- BR -->
+        <rect x="528" y="570" width="300" height="150" rx="28"
+              fill="#0b0f20" fill-opacity="0.88" stroke="#e6e9ff" stroke-opacity="0.22" stroke-width="2"/>
+        <text x="678" y="620" text-anchor="middle" font-size="20" fill="#eef1ff">
+          Q<tspan baseline-shift="sub" font-size="14">i</tspan>(C) = Ext<tspan baseline-shift="super" font-size="14">i+1</tspan><tspan font-size="18"> </tspan>
+          <tspan font-size="18">_R</tspan>(P/L, R)
+        </text>
+        <text x="678" y="654" text-anchor="middle" font-size="16" fill="#cfd6ff" opacity="0.92">higher charge modules</text>
+        <text x="678" y="686" text-anchor="middle" font-size="14" fill="#cfd6ff" opacity="0.72">homological invariants</text>
+      </g>
+
+      <!-- Arrows (commutative diagram) -->
+      <g stroke="#e6e9ff" stroke-opacity="0.78" stroke-width="3.2" fill="none" marker-end="url(#arr)">
+        <path d="M496 388 H528"/>
+        <path d="M346 454 V570"/>
+        <path d="M496 645 H528"/>
+        <path d="M678 454 V570"/>
+      </g>
+
+      <!-- Labels -->
+      <g fill="#eef1ff" opacity="0.86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">
+        <text x="512" y="372" text-anchor="middle">≅</text>
+        <text x="356" y="526" text-anchor="start">bulk–boundary</text>
+        <text x="512" y="630" text-anchor="middle">Ext / charges</text>
+        <text x="688" y="526" text-anchor="start">Witt / L</text>
+      </g>
+
+      <!-- Diagonal "commutes" tick -->
+      <g stroke="#e6e9ff" stroke-opacity="0.32" stroke-width="2" fill="none">
+        <path d="M466 470 L558 550"/>
+        <path d="M458 482 L478 462"/>
+        <path d="M546 558 L566 538"/>
+      </g>
+      <g fill="#cfd6ff" opacity="0.72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+        <text x="512" y="520" text-anchor="middle">commutes</text>
+      </g>
+    </g>
+
+    <!-- Subtle footer: Laurent polynomial hint -->
+    <g opacity="0.78" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#cfd6ff">
+      <text x="512" y="820" text-anchor="middle" font-size="16">
+        R = ℤ<tspan baseline-shift="sub" font-size="13">n</tspan>[Λ<tspan baseline-shift="sub" font-size="13">1</tspan>][Λ<tspan baseline-shift="sub" font-size="13">2</tspan>]  (Laurent polynomial ring)
+      </text>
+    </g>
+  </g>
+
+  <!-- Outer border -->
+  <circle cx="512" cy="512" r="492" fill="none" stroke="#e6e9ff" stroke-opacity="0.30" stroke-width="6"/>
+</svg>
